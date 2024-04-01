@@ -1,4 +1,4 @@
-stages:
+.stages:
 #  - test
   - deploy
   - build
@@ -7,7 +7,7 @@ stages:
 # - project: 'arsh/ranthambore'
 #   file: '/admin/.gitlab-ci.yml'
 
-before_script:
+.before_script:
   - apt-get update -qq
   - apt-get install -qq git
   # Setup SSH deploy keys
@@ -17,7 +17,7 @@ before_script:
   - mkdir -p ~/.ssh
   - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     
-deploy_staging:
+.deploy_staging:
   stage: deploy
   environment:
     name: staging
@@ -27,7 +27,7 @@ deploy_staging:
   only:
     - main
 
-build_staging:
+.build_staging:
   stage: build
   environment:
     name: staging
