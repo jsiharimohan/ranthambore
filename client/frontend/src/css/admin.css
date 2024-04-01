@@ -1,0 +1,352 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a:hover{
+  text-decoration: none !important;
+}
+#accordionMenu .accordion-item a {
+  font-size: 13px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.sideNav ul li a{
+  font-size: 13px;
+}
+.sideNav ul li{
+  border-bottom: 1px solid #677a8d;
+}
+.sideNav ul li #accordionMenu ul li:last-child{
+  border-bottom: none;
+}
+.accordion-item .collapse.show{
+  visibility: visible;
+}
+.accordion-item a:focus{
+  text-decoration: none;
+}
+.nav-tabs .nav-link{
+  background: #fff;
+  color: #111;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px 40px;
+  border-color: #ccc;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #b7292d;
+  border-color: #b7292d;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-color: #ccc;
+}
+.min600{
+  min-height: 625px;
+}
+.max50Percent{
+  max-width: 570px;
+}
+.padding-top80{
+  padding-top: 80px;
+}
+.mt-77{
+  margin-top: 77px;
+}
+.mt-50{
+  margin-top: 50px;
+}
+.min-150{
+  min-width: 150px;
+}
+.max193{
+  max-width: 235px;
+}
+.react-datepicker__input-container input{
+  border-color: #dfe2e6;
+  border-radius: 6px;
+  height: 40px;
+  font-size: 15px;
+  min-width: 220px;
+}
+.forHoteldateFilter .react-datepicker__input-container input{
+  min-width: 175px;
+  max-width: 175px;
+}
+.min600 input::placeholder{
+  font-size: 14px;
+  color: #444;
+}
+.bg-hotel-maroon{
+  background: #6083b6;
+}
+.usertype{
+  margin-left: -15px;
+  margin-bottom: 20px;
+}
+.usertype .radio label {
+  padding-left:0
+ }
+ .usertype .radio label input {
+  opacity:0
+ }
+ .usertype label>input+.forcustom {
+  background-color:#fff;
+  border:1px solid #ccc;
+  border-radius:4px;
+  color:#000;
+  cursor:pointer;
+  font-size:13px;
+  line-height:22px;
+  padding:9px 20px;
+  font-weight: bold;
+ }
+ .usertype label>input:checked+.forcustom {
+  background:#801a1f;
+  border:2px solid #801a1f;
+  color:#fff
+ } 
+ .multiImages #file[type="file"] {
+	display: none;
+}
+.multiImages .label{
+  padding: 8px 20px;
+  max-width: 215px;
+  background-color: #ff9100;
+  color: white;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.multiImages .result{
+  min-height: 100%;
+  max-height: auto;
+  width: 100%;
+  background-color: #272c34;
+  margin-top:1rem ;
+   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;  
+}
+.multiImages img{
+  width: 320px;
+  height: 180px;
+  object-fit: cover;
+  padding: 0.75rem; 
+}
+.controlDate .react-datepicker__input-container input{
+  min-width: 215px;
+}
+.setReactSelect{
+  min-width: 945px;
+  z-index: 999 !important;
+}
+.setReactSelect .css-1s2u09g-control{
+  height: 40px;
+  margin-right: 15px;
+}
+table tbody tr td{
+  color: #000;
+}
+.controlEnquiryDate .react-datepicker__input-container input{
+  height: 42px;
+  width: 100%;
+}
+#enquiryType{
+  height: 42px;
+}
+.padding-top80 .rs-picker-default .rs-picker-toggle.rs-btn{
+  height: 42px;
+  font-size: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.padding-top80 .rs-picker-toggle .rs-picker-toggle-placeholder{
+  color: #444;
+}
+.bigTable .table td, .table th{
+  font-size: 13px;
+}
+.footerAdmin{
+  background: #f6f6f6;
+  border-top: 1px solid #f6f6f6;
+}
+.min150 {
+  min-width: 150px;
+}
+.md\:ml-64{
+  margin-left: 15rem !important;
+}
+.indianCategory input::placeholder{
+  font-size: 12px;
+}
+.bg-green-700{
+  background: #1f5fbc !important;
+}
+.margin {
+  margin-top: 29px;
+}
+.bg-success{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+@media (max-width: 767px){
+.md\:ml-64{
+  margin-left: 0rem !important;
+}
+.hidden-xs{
+  display: none;
+}
+.resNavbar{
+  background: #394e6d !important;
+  margin: 0 !important;
+}
+.resNavbar .colllapbtn{
+  background: #fff !important;
+  height: 40px !important;
+  margin-top: 25px;
+}
+.latestUsers h2 {
+  font-size: 18px;
+}
+.latestUsers table tbody tr td button {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+table tbody tr td {
+  font-size: 12px;
+  padding: 5px !important;
+}
+table thead tr th {
+  font-size: 12px;
+  padding: 5px !important;
+}
+.grid {
+  display: block;
+}
+.padding-top80 {
+  padding-top: 25px;
+}
+.gridstyle {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.react-datepicker__input-container input {
+  min-width: 160px !important;
+  width: 160px !important;
+}
+.gridstyle .mt-50 {
+  margin-top: 20px;
+}
+.gridstyle .mt-77 {
+  margin-top: 20px;
+}
+.gridstyle .mt-77 a{
+  width: 100%;
+}
+.bg-hotel-maroon {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.Chambal-Dates .flex {
+  display: initial;
+}
+.Chambal-Dates .flex .react-datepicker__input-container input {
+  width: 100% !important;
+  margin-bottom: 10px;
+}
+.Chambal-Dates .flex button {
+  width: 100% !important;
+  margin-left: 0px !important;
+  margin-bottom: 10px;
+}
+.max193 {
+  max-width: 100%;
+}
+.mt-50 {
+  margin-top: 0px;
+}
+.controlEnquiryDate .react-datepicker__input-container input {
+  height: 42px;
+  width: 100% !important;
+  margin-bottom: 10px;
+}
+.hotel .mt-4 a {
+  margin-top: -55px;
+}
+.min-150 {
+  min-width: auto;
+}
+.margin {
+  margin-top: 0;
+}
+.pack .bg-success {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.formstyle div input {
+  margin-bottom: 10px;
+}
+.formstyle div select {
+  margin-bottom: 10px;
+}
+.dropdown-menu.show a {
+  font-size: 13px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  display: inline-block;
+  width: 100%;
+}
+.dropdown.show button {
+  font-size: 13px;
+  width: 100%;
+  padding: 9px !important;
+}
+.dropdown .bg-danger {
+  font-size: 12px;
+  padding: 9px;
+}
+.setReactSelect {
+  min-width: auto;
+}
+#file_input {
+  width: 100%;
+}
+.AmenityStatus .flex {
+  display: inline-block;
+  width: 100%;
+}
+.setReactSelect .css-1s2u09g-control {
+  height: auto;
+  margin-right: 0;
+  margin-top: 10px;
+}
+.AmenityStatus .flex div button {
+  width: 100%;
+  margin-top: 10px;
+}
+.AmenityStatus .status {
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+}
+.amenities .bg-success {
+  width: 100%;
+}
+.Package-Categories .mt-4 a.bg-success {
+  width: 100%;
+}
+.Package-Categories h3 {
+  margin-top: 15px !important;
+  display: inline-block;
+  width: 100%;
+}
+.indianForm .table tbody tr td {
+  min-width: 100px;
+}
+.CurrentB .rs-picker-toggle-wrapper {
+  margin-bottom: 10px;
+}
+}

@@ -1,0 +1,143 @@
+version: "3"
+services:
+  rabbitmq:
+      image: rabbitmq:3-management
+      container_name: rabbitmq
+      ports:
+          - 5672:5672
+          - 15672:15672
+  nosql-db:
+    image: mongo
+    ports:
+      - "27018:27017"
+    container_name: nosql-db
+    volumes:
+      - ./db/:/data/db
+  api-gateway:
+    build:
+      dockerfile: Dockerfile
+      context: ./client/api-gateway
+    container_name: api-gateway
+    ports:
+      - "5004:5004"
+    restart: always
+    depends_on:
+      - "nosql-db"
+    volumes:
+      - .:/app
+      - /app/client/api-gateway/node_modules
+
+    env_file:
+      - ./client/api-gateway/.env.dev
+  admin:
+    build:
+      dockerfile: Dockerfile
+      context: ./admin
+    container_name: admin
+    ports:
+      - "5005:5005"
+    restart: always
+    depends_on:
+      - "nosql-db"
+    volumes:
+      - .:/app
+      - /app/admin/node_modules
+
+    env_file:
+      - ./admin/.env.dev
+  chambal:
+    build:
+      dockerfile: Dockerfile
+      context: ./chambal
+    container_name: chambal
+    ports:
+      - "5006:5006"
+    restart: always
+    depends_on:
+      - "nosql-db"
+    volumes:
+      - .:/app
+      - /app/chambal/node_modules
+    env_file:
+      - ./chambal/.env.dev
+  hotel:
+    build:
+      dockerfile: Dockerfile
+      context: ./hotel
+    container_name: hotel
+    ports:
+      - "5000:5000"
+    restart: always
+    depends_on:
+      - "nosql-db"
+
+    volumes:
+      - .:/app/
+      - ./hotel/uploads:/root/ranthambore/hotel/uploads
+      - /app/hotel/node_modules
+    env_file:
+      - ./hotel/.env.dev
+  package:
+    build:
+      dockerfile: Dockerfile
+      context: ./package
+    container_name: package
+    ports:
+      - "5001:5001"
+    restart: always
+    depends_on:
+      - "nosql-db"
+
+    volumes:
+      - .:/app/
+      - ./package/uploads:/root/ranthambore/package/uploads
+      - /app/package/node_modules
+    env_file:
+      - ./package/.env.dev
+  payment:
+    build:
+      dockerfile: Dockerfile
+      context: ./payment
+    container_name: payment
+    ports:
+      - "5002:5002"
+    restart: always
+    depends_on:
+      - "nosql-db"
+
+    volumes:
+      - .:/app/
+      - /app/payment/node_modules
+    env_file:
+      - ./payment/.env.dev
+  safari:
+    build:
+      dockerfile: Dockerfile
+      context: ./safari
+    container_name: safari
+    ports:
+      - "5003:5003"
+    restart: always
+    depends_on:
+      - "nosql-db"
+
+    volumes:
+      - .:/app/
+      - /app/safari/node_modules
+    env_file:
+      - ./safari/.env.dev
+  client:
+    build:
+      dockerfile: Dockerfile
+      context: ./client/frontend
+    container_name: client
+    ports:
+      - 80:80
+    depends_on:
+      - "nosql-db"
+    volumes:
+      - .:/app/
+      - ./public/uploads:/root/ranthambore/client/frontend/public/uploads
+      - /app/client/frontend/node_modules
+    environment:
+      NODE_ENV: production

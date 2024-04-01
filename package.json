@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^36.0.1",
+    "@ckeditor/ckeditor5-react": "^5.1.0",
+    "date-and-time": "^2.4.3",
+    "razorpay": "^2.8.3",
+    "react-alert-template-basic": "^1.0.2",
+    "react-country-region-selector": "^3.6.1",
+    "react-helmet": "^6.1.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-swal": "^4.0.0"
+  }
+}
