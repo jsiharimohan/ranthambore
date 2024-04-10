@@ -125,7 +125,7 @@ module.exports = {
 
     res.status(200)
     .send({
-      message: "Login Otp sended successfully"+otp,
+      message: "Login Otp sended successfully",
       mobile: mobile,
     });
 
